@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Assignment 4</title>
   <link rel="stylesheet" href="style.css">
   <!-- import jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,8 +13,31 @@
 </head>
 
 <body>
-  <div id="game_grid">
-    <div class="card">
+
+  <div class="difficulty-buttons">
+    <button class="difficulty-button btn-primary" data-difficulty="easy">Easy</button>
+    <button class="difficulty-button btn-secondary" data-difficulty="medium">Medium</button>
+    <button class="difficulty-button btn-teritary" data-difficulty="hard">Hard</button>
+  </div>
+
+  <div class="reset-buttons">
+    <button class="reset-button btn-primary" data-reset="reset">Reset</button>
+    <button class="reset-button btn-secondary" data-reset="start">Start!</button>
+
+  </div>
+
+  
+  <div class="text-header" style="display: none">
+    <h2>Total Number of Pairs:  <span id="totalPair" style="color: red"></h2>
+    <h2>Number of Matches: <span id="numMatch" style="color: red"> </h2>
+    <h2>Number of pairs left: <span id="pairLeft" style="color: red"></h2>
+    <h2>Number of clicks: <span id="numClick" style="color: red"></h2>
+    <h2>You got <span id="totalTime" style="color: red">seconds. </h2>
+     <h2><span id="timePassed" style="color: red"></h2>
+  </div>
+  
+  <div id="game_grid" style="display: none">
+    <!-- <div class="card">
       <img id="img1" class="front_face" src="001.png" alt="">
       <img class="back_face" src="back.webp" alt="">
     </div>
@@ -37,7 +60,13 @@
     <div class="card">
       <img id="img6" class="front_face" src="003.png" alt="">
       <img class="back_face" src="back.webp" alt="">
-    </div>
+    </div> -->
+  </div>
+
+
+  <div class="theme-buttons" style="display: none">
+    <button class="theme-button btn-primary" data-theme="dark">Dark</button>
+    <button class="theme-button btn-secondary" data-theme="light">Light</button>
   </div>
 </body>
 

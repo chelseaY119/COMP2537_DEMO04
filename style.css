@@ -5,19 +5,38 @@ body {
 #game_grid {
   border: 2px tomato solid;
   width: 600px;
-  height: 400px;
+  height: 450px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
 
+#game_grid.dark {
+  background-color: rgb(46, 46, 46);
+}
 
-.card {
-  width: 33.3%;
+#game_grid.light {
+background-color: rgb(241, 236, 236);
+}
+
+
+#game_grid .card{
   position: relative;
   transition: transform 1s;
   perspective: 1000px;
   transform-style: preserve-3d;
+}
+
+#game_grid.easy-grid .card {
+  width: 33.3%;
+}
+
+#game_grid.medium-grid .card {
+  width: 25%;
+}
+
+#game_grid.hard-grid .card {
+  width: 16.6%;
 }
 
 
@@ -40,3 +59,81 @@ img {
 .front_face {
   transform: rotateY(180deg);
 }
+
+.btn-primary {
+  background-color: blanchedalmond;
+  height: 50px;
+  margin: 2%;
+  width: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: antiquewhite;
+  height: 50px;
+  margin: 2%;
+  width: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-teritary {
+  background-color: beige;
+  height: 50px;
+  margin: 2%;
+  width: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.difficulty-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+  height: 60px;
+  padding: 1%;
+
+}
+
+.reset-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+  height: 60px;
+  padding: 1%;
+
+}
+
+.theme-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3%;
+  height: 60px;
+  padding: 1%;
+  font-weight: bold;
+
+}
+
+.theme-button.active {
+  background-color: rgb(68, 83, 152);
+  color: white;
+}
+
+.text-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.text-header h2 {
+  margin: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
