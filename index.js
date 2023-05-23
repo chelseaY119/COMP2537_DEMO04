@@ -88,6 +88,9 @@ $(document).ready(function () {
           $(`#${firstCard.id}`).parent().addClass("matched");
           $(`#${secondCard.id}`).parent().addClass("matched");
           console.log(firstCard.id)
+        } else if(firstCardId === secondCardId){
+          console.log("same card clicked");
+          $(`#${firstCardId}`).parent().addClass("flip");
         } else {
           console.log("no match")
           setTimeout(() => {
@@ -96,7 +99,13 @@ $(document).ready(function () {
           }, 1000);
         }
 
-        firstCard = undefined;
+        if(firstCardId === secondCardId){
+          firstCard = firstCard;
+        } else {
+          firstCard = undefined;
+        }
+
+        
         secondCard = undefined;
 
       }
