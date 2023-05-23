@@ -178,8 +178,9 @@ $(document).ready(function () {
     alert("Here is the power up!");
 
     setTimeout(() => {
-      $(".card").toggleClass("flip");
+      $(".card:not(.matched)").toggleClass("flip");
     }, 1000);
+    
     
    
   };
